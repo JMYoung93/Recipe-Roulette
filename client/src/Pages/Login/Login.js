@@ -10,7 +10,7 @@ function login(){
             <div>
                 <form>
                     <input placeholder = "email@email.com" type = "email" id = "email" required/>
-                    <input placeholder = "password" type = "password" id = "password" required >
+                    <input placeholder = "password" type = "password" id = "password" required />
                     {error ? (
                         <div>
                             <p className="error-text">The provided credentials are incorrect</p>
