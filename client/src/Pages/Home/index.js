@@ -1,18 +1,12 @@
 import { Container } from "react-bootstrap"
 import DropDown from "../../components/Dropdown"
-import {Card} from "../components/Card"
+import Recipe from "/Users/juwonoh/project-3/Recipe-Roulette/client/src/components/Recipe"
 export default function Home(){
     return(
         <Container fluid justify-content-center>
             <DropDown />
             <h1>This is the Home page</h1>
-            <Card
-                title={id}
-                itemId={id} 
-                key={id}
-                onClick={handleItemClick(id)}
-                selected={id === selected}
-              />
+            <Recipe/>
         </Container>
     )
 }
