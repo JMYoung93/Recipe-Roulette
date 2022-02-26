@@ -27,7 +27,7 @@ app.use(express.json());
 
 // can change name 'production' to something else if needed
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
+    app.use(express.static(path.join(__dirname, '../client/public/index.html')));
 }
 
 // 
