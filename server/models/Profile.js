@@ -5,7 +5,7 @@ const profileSchema = new Schema ({
     name: {
         type: String, 
         required: true,
-        unique: true, 
+        unique: false, 
         trim: true,
     },
     email: {
@@ -17,7 +17,7 @@ const profileSchema = new Schema ({
     password: {
         type: String,
         required: true,
-        minlength: 5,
+        minlength: 8,
     },
 });
 
