@@ -6,6 +6,8 @@ const path = require('path');
 
 // 
 const {  typeDefs, resolvers } = require('./schemas');
+//Import `authMiddleware()` function to be configured with the Apollo Server 
+const { authMiddleware } = require('./utils/auth');
 const db = require('./config/connection');
 
 
@@ -17,9 +19,12 @@ const app = express();
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    //Add context to server so `authMiddleware()` function can pass data to resolver function
+    context: authMiddleware,
 });
 //TODO: Complete middleware post request logic 
 server.applyMiddleware({ app });
+
 
 // 
 app.use(express.urlencoded({ extended:false }));

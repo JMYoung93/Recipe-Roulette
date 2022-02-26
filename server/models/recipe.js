@@ -5,9 +5,10 @@ const mongoose = require('mongoose');
 const recipeSchema = new mongoose.Schema({
     //Add individual recipe properties and their types
     //Setting required to `true` will disallow null values
-    recipeName: { type: String, required: true},
+    title: { type: String, required: true},
     diet: {type: String, required: true},
     allergies: {type: String, required: true},
+    //TODO: figure out 
 });
 
 //Using mongoose.model() to compile a model based on the schema
@@ -22,7 +23,7 @@ const handleError = (err) => console.error(err);
 
 Recipe.create(
     {
-        recipeName: {recipeName},
+        title: {title},
         diet: {diet},
         allergies: {allergies}
     },
