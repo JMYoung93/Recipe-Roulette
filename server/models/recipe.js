@@ -22,8 +22,11 @@ const handleError = (err) => console.error(err);
 
 Recipe.create(
     {
-        recipeName: {name},
+        recipeName: {recipeName},
         diet: {diet},
-        allergies:
-    }
-)
+        allergies: {allergies}
+    },
+    (err) => (err ? handleError(err) : console.log('Created New Document'))
+);
+
+module.exports = Recipe;
