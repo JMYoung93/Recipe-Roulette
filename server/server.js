@@ -22,7 +22,6 @@ const server = new ApolloServer({
     //Add context to server so `authMiddleware()` function can pass data to resolver function
     context: authMiddleware,
 });
-//TODO: Complete middleware post request logic 
 server.applyMiddleware({ app });
 
 
