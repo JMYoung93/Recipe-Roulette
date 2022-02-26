@@ -8,7 +8,6 @@ const recipeSchema = new mongoose.Schema({
     title: { type: String, required: true},
     diet: {type: String, required: true},
     allergies: {type: String, required: true},
-    //TODO: figure out 
 });
 
 //Using mongoose.model() to compile a model based on the schema
