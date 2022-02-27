@@ -1,4 +1,4 @@
-import { Container} from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import DropDown from "../../components/Dropdown"
 import Recipe from "../../components/Recipe"
 export default function Home(){
