@@ -4,6 +4,7 @@ import About from './Pages/About'
 import Header from './components/Header';
 import Footer from './components/Footer'
 import Home from './Pages/Home';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
