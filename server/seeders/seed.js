@@ -11,7 +11,7 @@ const users = [
 
 let done = 0;
 
-module.exports = seedData = async () => {
+const seedData = async () => {
     try {
         await User.deleteMany ({});
 
@@ -26,3 +26,5 @@ module.exports = seedData = async () => {
 
     console.log("Mock data is seeded from seed script.");
 }
+
+    module.exports = seedData()
