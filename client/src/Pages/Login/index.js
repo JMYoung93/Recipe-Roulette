@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import {LOG} from '../../utils/mutation'
+import {LOG} from '../../utils/mutations'
 import Auth from '../../utils/auth'
 
-function login(props){
+function Login(props){
 
     const [formState, setFormState] = useState({
         email: '', 
@@ -25,7 +25,7 @@ function login(props){
     }
 
     const change = (e) => {
-        const { name, value } = event.target;
+        const { name, value } = e.target;
             setFormState({...formState, [name]: value });
     }
 
