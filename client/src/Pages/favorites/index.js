@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap"
 import React, {useState} from 'react'
 
-function Home(){
+function Favorites(){
     return(
         <Container fluid justify-content-center>
             <div>

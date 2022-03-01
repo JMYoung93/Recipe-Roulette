@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import {LOG} from '../../utils/mutation'
-import {Auth} from '../../utils/auth'
+import Auth from '../../utils/auth'
 
 function login(props){
 

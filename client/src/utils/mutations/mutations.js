@@ -13,3 +13,17 @@ export const LOG= gql `
         }
     }
 `
+export const create = gql `
+    mutation addProfile($name: String! $email: String! $password: String!){
+        addProfile(
+            name: $name
+            email: $email
+            password: $password)
+        {
+            token
+            user {
+                _id
+              }
+        }
+    }
+`;
