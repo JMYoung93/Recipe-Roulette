@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { CREATE} from '../utils/mutations';
-import Auth from '../utils/auth';
+import { ADD_PROFILE} from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
 
-function createAccount(props){
+function CreateAccount(props){
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [addProfile] = useMutation(ADD_PROFILE);
 
@@ -14,12 +14,12 @@ function createAccount(props){
         e.preventDefault()
         const mutRes = await addProfile({
             variables:{
-                name: formState.name
-                email: formState.email
+                name: formState.name,
+                email: formState.email,
                 password: formState.password
             }
         })
-        const token = mutationResponse.data.addUser.token;
+        const token = mutRes.data.addUser.token;
         Auth.login(token);
     }
 
@@ -40,11 +40,11 @@ function createAccount(props){
                     <input placeholder = "email@email.com" type = "email" id = "email" required/>
                     <input placeholder = "password" type = "password" id = "password" required />
                     <button type = "submit" > Done </button>
-                    <Link to = './login'> If account already exists</Link>
+                    <Link to = '../login'> If account already exists</Link>
                 </form>
             </div>
         </div>
     )
 }
 
-export default createAccount
+export default CreateAccount
