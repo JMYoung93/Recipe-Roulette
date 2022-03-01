@@ -1,9 +1,34 @@
 import React, {useState} from 'react'
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { ADD_USER } from '../utils/mutations';
+import { CREATE} from '../utils/mutations';
 import Auth from '../utils/auth';
-function createAccount(){
+
+
+function createAccount(props){
+    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [addProfile] = useMutation(ADD_PROFILE);
+
+    
+    const submit = async(e) => {
+        e.preventDefault()
+        const mutRes = await addProfile({
+            variables:{
+                name: formState.name
+                email: formState.email
+                password: formState.password
+            }
+        })
+        const token = mutationResponse.data.addUser.token;
+        Auth.login(token);
+    }
+
+    const change = (e) => {
+        const { name, value } = e.target;
+        setFormState({...formState, [name]: value,});
+    }
+
+
     return(
         <div>
             <div>

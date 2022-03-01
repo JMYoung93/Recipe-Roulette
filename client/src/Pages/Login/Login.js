@@ -16,7 +16,7 @@ function login(props){
     const submit = async(e) => {
         e.preventDefault()
         try{
-            const mutationResponse = await login({
+            const mutRes = await login({
                 variables: { email: formState.email, password: formState.password },
               });
         } catch(e){
