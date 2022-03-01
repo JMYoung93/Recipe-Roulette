@@ -8,6 +8,10 @@ type Profile {
     password: String
 }
 
+type Query {
+    profiles: [Profile]
+}
+
 type Auth {
     token: ID!
     profile: Profile

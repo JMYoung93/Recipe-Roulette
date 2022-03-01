@@ -1,8 +1,8 @@
-let User = require('../models/Profile');
+let Profile = require('../models/Profile');
 let mongoose = require('mongoose');
 
-const users = [
-    new User({
+const profiles = [
+    new Profile({
         name: "Caroline Pastorelli",
         email: "caroline.pastorelli@gmail.com",
         password: "password1234"
@@ -13,10 +13,10 @@ let done = 0;
 
 const seedData = async () => {
     try {
-        await User.deleteMany ({});
+        await Profile.deleteMany ({});
 
-        for (let i = 0; i < users.length; i++) {
-            users[i].save(function (err, result) {
+        for (let i = 0; i < profiles.length; i++) {
+            profiles[i].save(function (err, result) {
                 done++;
             });
         }
