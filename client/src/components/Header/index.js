@@ -1,17 +1,22 @@
-import { Container , Row, Col,  Image, Button} from "react-bootstrap"
+import { Container , Row, Col, Image, Button, Nav, Navbar} from "react-bootstrap"
 
 export default function Header(){
     return(
+        <Navbar bg="light">
         <Container fluid className='justify-content-between'>
-            <Row>
-                <Col >
-                <Image thumbnail={true} roundedCircle={true} src="https://images.unsplash.com/photo-1530908158103-e2d2bf40c235?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FydG9vbiUyMHJlZnJpZ2VyYXRvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" width={100} height={100}/>
-                </Col>
-                <Col>
-                <Button variant="primary">LogIn</Button>
-                </Col>
-                
-            </Row>
+            <Navbar.Brand href="#home">
+                <Image thumbnail={true} roundedCircle={true} src={require('./roulettelogo.png')} width={110} height={110}
+                className='d-inline-block align top'/>
+            </Navbar.Brand>
+                <Nav className="me-auto ">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#Login">Favorites</Nav.Link>
+                    <Nav.Link href="#Logout">Login</Nav.Link>
+                    <Nav.Link href="#Favorites">Logout</Nav.Link>
+                </Nav>
         </Container>
+        </Navbar>
     )
 }
+
+  
