@@ -11,7 +11,7 @@ const users = [
 
 let done = 0;
 
-export const seedData = async () => {
+module.exports = seedData = async () => {
     try {
         await User.deleteMany ({});
 
