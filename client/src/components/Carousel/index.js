@@ -2,7 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 
-function Recipe() {
+function Carousel() {
   return (
     <Carousel>
       <Carousel.Item>
@@ -43,4 +43,4 @@ function Recipe() {
     </Carousel>
   );
 }
-export default Recipe;
+export default Carousel;
