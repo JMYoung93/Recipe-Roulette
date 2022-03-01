@@ -1,6 +1,34 @@
 import React, {useState} from 'react'
+import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom';
+import {LOG} from '../../utils/mutation'
+import {Auth} from '../../utils/auth'
 
-function login(){
+function login(props){
+
+    const [formState, setFormState] = useState({
+        email: '', 
+        password: ''
+    })
+
+    const [login, {error}] = useMutation(LOG)
+
+    const submit = async(e) => {
+        e.preventDefault()
+        try{
+            const mutationResponse = await login({
+                variables: { email: formState.email, password: formState.password },
+              });
+        } catch(e){
+            console.log(e)
+        }
+    }
+
+    const change = (e) => {
+        const { name, value } = event.target;
+            setFormState({...formState, [name]: value });
+    }
+
     return (
         <div>
             <div>
@@ -8,9 +36,9 @@ function login(){
                 
             </div>
             <div>
-                <form>
-                    <input placeholder = "email@email.com" type = "email" id = "email" required/>
-                    <input placeholder = "password" type = "password" id = "password" required />
+                <form onSubmit = {submit}>
+                    <input placeholder = "email@email.com" type = "email" id = "email" onChange = {change} required/>
+                    <input placeholder = "password" type = "password" id = "password" onChange = {change} required />
                     {error ? (
                         <div>
                             <p className="error-text">The provided credentials are incorrect</p>
@@ -24,4 +52,4 @@ function login(){
     )
 }
 
-export default Login
+export default Login;
