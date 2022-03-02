@@ -30,9 +30,9 @@ app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
 
 // can change name 'production' to something else if needed
-// if (process.env.NODE_ENV === 'production') {
-//     app.use(express.static(path.join(__dirname, '../client/public/index.html')));
-// }
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
 // 
 app.get('*', (req, res) => {

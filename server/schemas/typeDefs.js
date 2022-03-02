@@ -6,6 +6,7 @@ type Profile {
     name: String
     email: String
     password: String
+    profiles: [Profile]!
 }
 
 type Query {
