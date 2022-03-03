@@ -6,6 +6,11 @@ type Profile {
     name: String
     email: String
     password: String
+    profiles: [Profile]!
+}
+
+type Query {
+    profiles: [Profile]
 }
 
 type Auth {
