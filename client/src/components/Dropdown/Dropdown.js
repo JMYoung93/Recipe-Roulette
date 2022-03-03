@@ -16,7 +16,6 @@ export default function DropDown(){
       <Dropdown.Divider />
       <Dropdown.Item href="#">Separated link</Dropdown.Item>
     </DropdownButton>
-    <FormControl aria-label="Text input with dropdown button" />
   </InputGroup>
 
 
