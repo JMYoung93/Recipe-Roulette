@@ -1,11 +1,15 @@
-const { Profile } = require('../models');
+const { Profile, Recipe } = require('../models');
 const profileData = require('./profileData.json');
+const recipeData = require('./recipeData.json');
 const db = require('../config/connection');
 
 db.once('open', async () => {
     try {
         await Profile.deleteMany({});
         await Profile.insertMany(profileData);
+
+        await Recipe.deleteMany({});
+        await Recipe.insertMany(recipeData);
 
         // for (let i = 0; i < profileData.length; i++) {
         //     const { _id, profileAuthor } = await Profile.create(profileData[i]);

@@ -8,9 +8,17 @@ type Profile {
     password: String
 }
 
+type Recipe {
+    _id: ID
+    title: String
+    diet: String
+    allergies: String
+}
+
 type Query {
     profiles: [Profile]
     me: Profile
+    recipes: [Recipe]
 }
 
 type Auth {

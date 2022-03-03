@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
+const { Profile, Recipe } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -17,6 +17,10 @@ const resolvers = {
             }
             throw new AuthenticationError('You need to be logged in!');
         },
+
+        recipes: async () => {
+            return await Recipe.find();
+        }
     },
     Mutation: {
         addProfile: async (parent, {name, email, password}) => {
