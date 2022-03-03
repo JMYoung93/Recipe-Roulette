@@ -6,20 +6,20 @@ type Profile {
     name: String
     email: String
     password: String
-    profiles: [Profile]!
 }
 
 type Query {
     profiles: [Profile]
+    me: Profile
 }
 
 type Auth {
-    token: ID!
+    token: ID
     profile: Profile
 }
 
 type Mutation {
-    addProfile(name: String!, email: String, password: String!): Auth
+    addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 }
 `;

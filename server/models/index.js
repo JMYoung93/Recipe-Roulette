@@ -1,4 +1,4 @@
 const Profile = require('./Profile');
-const Recipe = require('./recipe')
+// const Recipe = require('./recipe')
 
-module.exports = { Profile, Recipe };
+module.exports = { Profile };
