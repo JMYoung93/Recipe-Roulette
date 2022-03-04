@@ -1,23 +1,27 @@
-const { Profile } = require('../models/Profile');
+const { Profile, Recipe } = require('../models');
 const profileData = require('./profileData.json');
+const recipeData = require('./recipeData.json');
 const db = require('../config/connection');
 
 db.once('open', async () => {
     try {
         await Profile.deleteMany({});
-        await Profile.create(profileData);
+        await Profile.insertMany(profileData);
 
-        for (let i = 0; i < profileData.length; i++) {
-            const { _id, profileAuthor } = await Profile.create(profileData[i]);
-            const profiles = await Profile.findOneAndUpdate(
-                { username: profileAuthor},
-                {
-                    $addToSet: {
-                        profiles: _id
-                    },
-                }
-            );
-        }
+        await Recipe.deleteMany({});
+        await Recipe.insertMany(recipeData);
+
+        // for (let i = 0; i < profileData.length; i++) {
+        //     const { _id, profileAuthor } = await Profile.create(profileData[i]);
+        //     const profiles = await Profile.findOneAndUpdate(
+        //         { username: profileAuthor},
+        //         {
+        //             $addToSet: {
+        //                 profiles: _id
+        //             },
+        //         }
+        //     );
+        // }
     } catch (err) {
         console.error(err) ;
         process.exit(1);

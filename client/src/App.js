@@ -18,6 +18,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 =======
 import CreateAccount from './Pages/CreateAccount'
 import Login from './Pages/Login'
+import Options from './Pages/Options.js';
+import { Button } from "./components/Button";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -46,7 +48,7 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <Login/>
+          <Options />
           <Footer />
         </div>
        </Router>
