@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap"
-import DropDown from "../../components/Dropdown"
+import DropDown from "../../components/Dropdown/Dropdown"
 import Recipe from "../../components/Recipe"
 export default function Home(){
     return(
