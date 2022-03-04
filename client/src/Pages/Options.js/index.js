@@ -63,13 +63,13 @@ const click = ()=>{
                 <Form>
      {['checkbox'].map((type) => (
     <div key={`default-${type}`} className="mb-3">
-      <Form.Check 
+      {/* <Form.Check 
         type={type}
         id={`default-${type}`}
         label={`Gluten-Free`}
         value='gluten'
-        onChange={e => choicesArr.push(e.currentTarget.value)}
-      />
+        onChange={e => choicesArr.push(e.currentTarget.value)} */}
+      {/* /> */}
       <Form.Check 
         type={type}
         id={`default-${type}`}
