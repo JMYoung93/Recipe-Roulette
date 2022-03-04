@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import React, {useState} from "react";
 import { InputGroup, DropdownButton, Dropdown, FormControl, Form, FormGroup, Button} from "react-bootstrap"
 function Options() {
@@ -7,13 +8,37 @@ let choicesArr= [];
 const click = ()=>{
     setChoice(choicesArr)
 }
+console.log(choice);
 
-   console.log(choice)
+    
 
     return(
         
             <Form> 
                 <h1>What do you want to eat today?</h1>
+                
+
+                <Form.Group>
+                <h2>Pick a Food Category</h2>
+                <>
+  <Form.Group className="mb-3">
+  </Form.Group>
+  <Form.Group className="mb-3">
+    
+    <Form.Select>
+      <option>Beef</option>
+      <option>Chicken</option>
+      <option>Fish</option>
+      <option>Pork</option>
+      <option>Veggies</option>
+    </Form.Select>
+  </Form.Group>
+  <Form.Group className="mb-3">
+   </Form.Group>
+</>
+
+
+            </Form.Group>
             <Form.Group>
                 <h2>Dietary Preferences</h2>
                 <InputGroup className="mb-3">
@@ -62,14 +87,14 @@ const click = ()=>{
                 <InputGroup className="mb-3">
                 <Form>
      {['checkbox'].map((type) => (
-    <div key={`default-${type}`} className="mb-3">
-      {/* <Form.Check 
-        type={type}
-        id={`default-${type}`}
-        label={`Gluten-Free`}
-        value='gluten'
-        onChange={e => choicesArr.push(e.currentTarget.value)} */}
-      {/* /> */}
+    <div className="mb-3">
+      // <Form.Check 
+        // type="checkbox"
+        // id="selected"
+        // checked={this.state.selected}
+        // onChange={this.flipValue.bind(this)}
+      />
+      <label for="gluten-free"></label>
       <Form.Check 
         type={type}
         id={`default-${type}`}
@@ -123,9 +148,8 @@ const click = ()=>{
           
 
 
-        
+      
     )
 }
-
 
 export default Options 
