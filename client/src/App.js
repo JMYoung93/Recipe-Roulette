@@ -13,6 +13,9 @@ import About from './Pages/About'
 import Header from './components/Header';
 import Footer from './components/Footer'
 import Home from './Pages/Home';
+<<<<<<< HEAD
+import 'bootstrap/dist/css/bootstrap.css';
+=======
 import CreateAccount from './Pages/CreateAccount'
 import Login from './Pages/Login'
 import Options from './Pages/Options.js';
@@ -36,6 +39,7 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+>>>>>>> ce501244e3fdbfe2eff0804355728c152d3176d1
 
 
 
