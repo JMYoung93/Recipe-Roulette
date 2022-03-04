@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { InputGroup, DropdownButton, Dropdown, FormControl, Form, FormGroup, Button} from "react-bootstrap"
+import './styles.css'
 function Options() {
 const [choice, setChoice]= useState([])
 let choicesArr= [];
@@ -16,7 +17,7 @@ const click = ()=>{
                 <h1>What do you want to eat today?</h1>
             <Form.Group>
                 <h2>Dietary Preferences</h2>
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-3 justify-content-center">
                     <DropdownButton
                     variant="outline-secondary"
                     title="Dietary Preferences"
@@ -37,7 +38,7 @@ const click = ()=>{
 
             <Form.Group>
                 <h2>Meal Course</h2>
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-3 justify-content-center">
                     <DropdownButton
                     variant="outline-secondary"
                     title="Meal Course"
@@ -59,7 +60,7 @@ const click = ()=>{
 
             <Form.Group>
                 <h2>Allergies</h2>
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-3 justify-content-center">
                 <Form>
      {['checkbox'].map((type) => (
     <div key={`default-${type}`} className="mb-3">
