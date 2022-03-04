@@ -1,3 +1,12 @@
+const rootURL = "https://api.edamam.com/search?"
+const apiKey = "&app_key=c0baa345e633fba28dd95821b2cec992"
+const appId = "&app_id=9ace14ad"
+const param1 = "q=fish"
+const param2 = "&Health=peanut-free"
+const param3 = "&mealType=Lunch"
+
+
+
 import { render } from "@testing-library/react";
 import React, { useState } from "react";
 import {
@@ -16,7 +25,7 @@ function Options() {
   const click = () => {
     setChoice(choicesArr);
   };
-  console.log(choice);
+  console.log(choicesArr);
 
   return (
     <Form>
