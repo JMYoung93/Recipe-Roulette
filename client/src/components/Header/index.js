@@ -3,17 +3,17 @@ import "./styles.css"
 
 export default function Header(){
     return(
-        <Navbar bg="light">
+        <Navbar className='navbar'>
         <Container fluid className='justify-content-between'>
             <Navbar.Brand href="#home">
-                <Image thumbnail={true} roundedCircle={true} src={require('../Header/roulettelogo.png')} width={130} height={130}
+                <Image src={require('../Header/roulettelogo.png')} width={120} height={120}
                 className='d-inline-block align top'/>
             </Navbar.Brand>
-                <Nav className="me-auto ">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#Login">Favorites</Nav.Link>
-                    <Nav.Link href="#Logout">Login</Nav.Link>
-                    <Nav.Link href="#Favorites">Logout</Nav.Link>
+                <Nav className="me-auto">
+                    <Nav.Link className="navlink" href="#home">Home</Nav.Link>
+                    <Nav.Link className="navlink" href="#Login">Favorites</Nav.Link>
+                    <Nav.Link className="navlink" href="#Logout">Login</Nav.Link>
+                    <Nav.Link className="navlink" href="#Favorites">Logout</Nav.Link>
                 </Nav>
         </Container>
         </Navbar>

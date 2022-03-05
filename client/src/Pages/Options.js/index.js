@@ -9,6 +9,7 @@ import {
   Form,
   FormGroup,
   Button,
+  Image
 } from "react-bootstrap";
 
 const rootURL = "https://api.edamam.com/search?"
@@ -30,11 +31,12 @@ function Options() {
   console.log(choicesArr);
 
   return (
-    <Form>
+    <Form className='mainForm'>
+        <Image src={require('../../components/Header/roulettelogo.png')} width={230} height={230}
+                className='d-inline-block align top'/>
       <h1>What do you want to eat today?</h1>
-
       <Form.Group className="mb-3">
-        <h2>Protein Selection</h2>
+        <h2 className='section-title'>Protein Selection</h2>
         <InputGroup className="mb-3">
           <DropdownButton
             variant="outline-secondary"
@@ -51,7 +53,7 @@ function Options() {
         </InputGroup>
       </Form.Group>
       <Form.Group className="mb-3">
-        <h2>Dietary Preferences</h2>
+        <h2 className='section-title'>Dietary Preferences</h2>
         <InputGroup className="mb-3">
           <DropdownButton
             variant="outline-secondary"
@@ -67,7 +69,7 @@ function Options() {
       </Form.Group>
 
       <Form.Group>
-        <h2>Meal Course</h2>
+        <h2 className='section-title'>Meal Course</h2>
         <InputGroup className="mb-3">
           <DropdownButton
             variant="outline-secondary"
@@ -84,7 +86,7 @@ function Options() {
       </Form.Group>
 
       <Form.Group>
-        <h2>Allergies</h2>
+        <h2 className='section-title'>Allergies</h2>
         <InputGroup className="mb-3">
           <Form>
             {["checkbox"].map((type) => (

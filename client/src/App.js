@@ -17,6 +17,9 @@ import CreateAccount from './Pages/CreateAccount'
 import Login from './Pages/Login'
 import Options from './Pages/Options.js';
 import { Button } from "./components/Button";
+import backgroundVideo from '../src/components/video/cookingbg.mp4'
+
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,12 +46,27 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="App">
+          <video autoPlay loop muted 
+          style={{
+            position: 'absolute',
+            width: "100%",
+            left: "50%",
+            top: "50%",
+            height: "100%",
+            objectFit: "cover",
+            transform: "translate(-50%, -50%)",
+            zIndex: "-1"
+          }}
+          id='video'>
+            <source src={backgroundVideo} type='video/mp4'/>
+            </video>
           <Header />
           <Options />
           <Footer />
         </div>
        </Router>
     </ApolloProvider>
+    
   );
 }
 

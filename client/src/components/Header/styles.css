@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap');
+
+body {
+    background-attachment: fixed;
+}
+
+.d-inline-block {
+    position: relative;
+    background: none;
+    animation: rotation 50s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+.navbar {
+    background: inherit;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    font-family:'Noto Serif Display', serif;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.navbar:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 500px rgb(255, 255, 255);
+    filter: blur(10px);
+    margin: -20px;
+}
+
+/* .me-auto {
+   font-weight: bolder;
+   
+} */
+
+.navlink {
+    margin-right: 30px;
+    font-size: 32px;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
+}
