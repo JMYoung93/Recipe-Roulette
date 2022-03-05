@@ -1,8 +1,5 @@
-
 import "./styles.css";
-
 import axios from "axios";
-
 import { render } from "@testing-library/react";
 import React, { useState } from "react";
 import {
@@ -56,7 +53,8 @@ function Options() {
   }
 
   async function getApistuff() {
-    await axios(testAPI).then((response) => {
+    await axios(testAPI)
+    .then((response) => {
       if (response.status === 200) {
         console.log(response);
         console.log(response.data);
@@ -75,16 +73,18 @@ function Options() {
       console.log(response);
       console.log(response.status);
       throw response;
-    });
+    } ,
+    //  .then(data => {
+    //   setData(data)
+    
+    //   })
+    //   .catch(err => {
+    //   console.error(err)
+    //   setError(err)
+      // })
+    );
   }
-  // .then(data => {
-  // setData(data)
 
-  // })
-  // .catch(err => {
-  // console.error(err)
-  // setError(err)
-  // })
 
 
   const click = () => {
@@ -99,28 +99,8 @@ function Options() {
           width={230}
           height={230}
           className="d-inline-block align top"
-        />
-       
-
-  );
-}
-export default Options;
-
-import React, {useState} from "react";
-import { InputGroup, DropdownButton, Dropdown, FormControl, Form, FormGroup, Button} from "react-bootstrap"
-function Options() {
-const [choice, setChoice]= useState([])
-let choicesArr= [];
-
-const click = ()=>{
-    setChoice(choicesArr)
-}
-
-   console.log(choice)
-
-    return(
-        
-            <Form> 
+        /> 
+           
                 <h1>What do you want to eat today?</h1>
             <Form.Group>
                 <h2>Dietary Preferences</h2>
@@ -135,11 +115,8 @@ const click = ()=>{
                      <Dropdown.Item href="#">Pescatarian</Dropdown.Item>
                      <Dropdown.Item href="#">Not Picky</Dropdown.Item>
                     </DropdownButton>
-                    
-                    
-                
+                  
                 </InputGroup>
-
 
             </Form.Group>
 
@@ -168,7 +145,6 @@ const click = ()=>{
             <Form.Group>
                 <h2>Allergies</h2>
                 <InputGroup className="mb-3">
-                <Form>
      {['checkbox'].map((type) => (
     <div key={`default-${type}`} className="mb-3">
       <Form.Check 
@@ -213,28 +189,12 @@ const click = ()=>{
       />
       <Button variant="primary" onClick={()=> click()}>submit</Button>
     </div>
-  ))}
-  
-  
-</Form>
-          
-                    
-                
-                </InputGroup>
-
-
+  ))}              
+               </InputGroup>
             </Form.Group>
-            
-
-                
             </Form>
-          
+            </Container>
+  );
+      }
 
-
-        
-    )
-}
-
-
-export default Options 
-
+      export default Options;
