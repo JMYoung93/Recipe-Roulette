@@ -48,11 +48,9 @@ function Options() {
     setChoice(choicesArr);
   };
   console.log(choicesArr);
-
   return (
     <Form>
       <h1>What do you want to eat today?</h1>
-
       <Form.Group className="mb-3">
         <h2>Protein Selection</h2>
         <InputGroup className="mb-3">
@@ -94,7 +92,6 @@ function Options() {
           </DropdownButton>
         </InputGroup>
       </Form.Group>
-
       <Form.Group>
         <h2>Meal Course</h2>
         <InputGroup className="mb-3">
@@ -111,7 +108,6 @@ function Options() {
           </DropdownButton>
         </InputGroup>
       </Form.Group>
-
       <Form.Group>
         <h2>Allergies</h2>
         <InputGroup className="mb-3">
@@ -168,5 +164,4 @@ function Options() {
     </Form>
   );
 }
-
 export default Options;
