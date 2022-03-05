@@ -8,13 +8,26 @@ type Profile {
     password: String
 }
 
+type Recipe {
+    _id: ID
+    title: String
+    diet: String
+    allergies: String
+}
+
+type Query {
+    profiles: [Profile]
+    me: Profile
+    recipes: [Recipe]
+}
+
 type Auth {
-    token: ID!
+    token: ID
     profile: Profile
 }
 
 type Mutation {
-    addProfile(name: String!, email: String, password: String!): Auth
+    addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 }
 `;
