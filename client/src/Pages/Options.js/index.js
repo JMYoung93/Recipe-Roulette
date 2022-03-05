@@ -176,7 +176,6 @@ function Options() {
   );
 }
 export default Options;
-=======
 import React, {useState} from "react";
 import { InputGroup, DropdownButton, Dropdown, FormControl, Form, FormGroup, Button} from "react-bootstrap"
 function Options() {
