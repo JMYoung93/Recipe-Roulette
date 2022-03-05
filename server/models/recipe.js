@@ -5,9 +5,18 @@ const mongoose = require('mongoose');
 const recipeSchema = new mongoose.Schema({
     //Add individual recipe properties and their types
     //Setting required to `true` will disallow null values
-    title: { type: String, required: true},
-    diet: {type: String, required: true},
-    allergies: {type: String, required: true},
+    title: { 
+        type: String, 
+        required: true
+    },
+    diet: {
+        type: String,
+        required: true
+    },
+    allergies: {
+        type: String, 
+        required: true
+    },
 });
 
 //Using mongoose.model() to compile a model based on the schema
@@ -20,13 +29,13 @@ const handleError = (err) => console.error(err);
 //Using the model, we can create individual documents that have the properties defined
 //in the schema
 
-Recipe.create(
-    {
-        title: {title},
-        diet: {diet},
-        allergies: {allergies}
-    },
-    (err) => (err ? handleError(err) : console.log('Created New Document'))
-);
+// Recipe.create(
+//     {
+//         title: {title},
+//         diet: {diet},
+//         allergies: {allergies}
+//     },
+//     (err) => (err ? handleError(err) : console.log('Created New Document'))
+// );
 
 module.exports = Recipe;

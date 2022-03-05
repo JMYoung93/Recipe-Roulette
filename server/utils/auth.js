@@ -19,7 +19,7 @@ module.exports = {
 
         // if token can be verified, add the decoded user's data to the request so resolver can access the data
         try {
-            const { data } = jqt.verify(token, secret, { maxAge: expiration });
+            const { data } = jwt.verify(token, secret, { maxAge: expiration });
             req.user = data;
         } catch {
             console.log('Invalid token');
