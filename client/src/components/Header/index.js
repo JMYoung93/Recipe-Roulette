@@ -11,7 +11,7 @@ export default function Header(){
             </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link className="navlink" href="#home">Home</Nav.Link>
-                    <Nav.Link className="navlink" href="#Login">Favorites</Nav.Link>
+                    <Nav.Link className="navlink" href="../">Favorites</Nav.Link>
                     <Nav.Link className="navlink" href="#Logout">Login</Nav.Link>
                     <Nav.Link className="navlink" href="#Favorites">Logout</Nav.Link>
                 </Nav>
