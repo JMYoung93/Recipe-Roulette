@@ -1,17 +1,21 @@
-import { Container , Row, Col,  Image, Button} from "react-bootstrap"
+import { Container , Row, Col,  Image, Button, Nav, Navbar} from "react-bootstrap"
+import "./styles.css"
 
 export default function Header(){
     return(
+        <Navbar className='navbar'>
         <Container fluid className='justify-content-between'>
-            <Row>
-                <Col >
-                <Image thumbnail={true} roundedCircle={true} src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_118556937_stock-vector-refrigerator-mascot--a-vector-cartoon-illustration-of-a-home-kitchen-refrigerator-mascot.html&psig=AOvVaw2XMpgVR4-hdtKP3kf8DgUF&ust=1646549417765000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiaztywrvYCFQAAAAAdAAAAABAD" width={100} height={100}/>
-                </Col>
-                <Col>
-                <Button variant="primary">LogIn</Button>
-                </Col>
-                
-            </Row>
+            <Navbar.Brand href="#home">
+                <Image src={require('../Header/roulettelogo.png')} width={120} height={120}
+                className='d-inline-block align top'/>
+            </Navbar.Brand>
+                <Nav className="me-auto">
+                    <Nav.Link className="navlink" href="#home">Home</Nav.Link>
+                    <Nav.Link className="navlink" href="../">Favorites</Nav.Link>
+                    <Nav.Link className="navlink" href="#Logout">Login</Nav.Link>
+                    <Nav.Link className="navlink" href="#Favorites">Logout</Nav.Link>
+                </Nav>
         </Container>
+        </Navbar>
     )
 }

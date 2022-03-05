@@ -17,7 +17,5 @@ export default function DropDown(){
       <Dropdown.Item href="#">Separated link</Dropdown.Item>
     </DropdownButton>
   </InputGroup>
-
-
     )
 }
