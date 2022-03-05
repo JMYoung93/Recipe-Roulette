@@ -26,10 +26,28 @@ function Options() {
   const apiUrl = 'https://api.edamam.com/search?&app_key=c0baa345e633fba28dd95821b2cec992&app_id=9ace14ad'
   const [choice, setChoice] = useState([]);
   const [proteinSelection, setProteinSelection] = useState("");
+  const [dietSelection, setDietSelection] = useState("");
+  const [mealSelection, setMealSelection] = useState("");
+  const [allergySelection, setAllergySelection] = useState("");
   let choicesArr = [];
   
   const handleProteinSelect = (e) => {
     setProteinSelection(e)
+    console.log(e)
+  }
+
+  const handleDietSelect = (e) => {
+    setDietSelection(e)
+    console.log(e)
+  }
+
+  const handleMealSelect = (e) => {
+    setMealSelection(e)
+    console.log(e)
+  }
+
+  const handleAllergySelect = (e) => {
+    setAllergySelection(e)
     console.log(e)
   }
 
@@ -55,7 +73,6 @@ function Options() {
               variant="outline-secondary"
               title="Protein Selection"
               id="input-group-dropdown-1"
-      
               onSelect={handleProteinSelect}
             >
               <Dropdown.Item eventKey="Chicken">
@@ -80,6 +97,7 @@ function Options() {
               variant="outline-secondary"
               title="Dietary Preferences"
               id="input-group-dropdown-1"
+              onSelect={handleDietSelect}
             >
               <Dropdown.Item href="#">Vegetarian</Dropdown.Item>
               <Dropdown.Item href="#">Vegan</Dropdown.Item>
@@ -96,6 +114,7 @@ function Options() {
               variant="outline-secondary"
               title="Meal Course"
               id="input-group-dropdown-1"
+              onSelect={handleMealSelect}
             >
               <Dropdown.Item href="#">Breakfast</Dropdown.Item>
               <Dropdown.Item href="#">Lunch</Dropdown.Item>
@@ -111,7 +130,7 @@ function Options() {
           <InputGroup className="mb-3">
               {["checkbox"].map((type) => (
                 <div className="mb-3">
-                  //{" "}
+                  {" "}
                   <Form.Check
                   // type="checkbox"
                   // id="selected"
@@ -124,16 +143,14 @@ function Options() {
                     id={`default-${type}`}
                     label={`Soy-Free`}
                     value="soy"
-                    onChange={(e) => {
-                      choicesArr.push(e.currentTarget.value);
-                    }}
+                    onChange={handleAllergySelect}
                   />
                   <Form.Check
                     type={type}
                     id={`default-${type}`}
                     label={`Peanut-Free`}
                     value="nutfree"
-                    onChange={(e) => choicesArr.push(e.currentTarget.value)}
+                    onChange={handleAllergySelect}
                   />
                   <Form.Check
                     type={type}
@@ -144,11 +161,13 @@ function Options() {
                     type={type}
                     id={`default-${type}`}
                     label={`Egg-Free`}
+                    onChange={handleAllergySelect}
                   />
                   <Form.Check
                     type={type}
                     label={`Dairy-Free`}
                     id={`disabled-default-${type}`}
+                    onChange={handleAllergySelect}
                   />
                   <Button variant="primary" onClick={() => click()}>
                     Submit
