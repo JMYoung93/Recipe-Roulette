@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -46,6 +46,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <Switch>
         <div className="App">
           <video autoPlay loop muted 
           style={{
@@ -62,10 +63,16 @@ function App() {
             <source src={backgroundVideo} type='video/mp4'/>
             </video>
           <Header />
+
           {/* <Options /> */}
           <Search/>
+          <Route exact path = '/' component = {Home}/>
+          <Route exact path = '/login' component = {Login}/>
+          <Route exact path = '/createAccount' component = {CreateAccount}/>
+          <Route exact path = '/Options' component = {Options}/>
           <Footer />
         </div>
+        </Switch>
        </Router>
     </ApolloProvider>
     
