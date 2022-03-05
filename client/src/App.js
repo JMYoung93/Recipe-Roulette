@@ -15,6 +15,8 @@ import Footer from './components/Footer'
 import Home from './Pages/Home';
 import CreateAccount from './Pages/CreateAccount'
 import Login from './Pages/Login'
+import Options from './Pages/Options.js';
+import { Button } from "./components/Button";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -42,7 +44,7 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <CreateAccount/>
+          <Options />
           <Footer />
         </div>
        </Router>
