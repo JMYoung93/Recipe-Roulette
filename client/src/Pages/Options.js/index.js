@@ -18,6 +18,7 @@ function Options() {
   const param2 = "&Health=peanut-free";
   const param3 = "&mealType=Lunch";
   const testAPI = rootURL + param1 + appId + apiKey + param2 + param3;
+
   const [choice, setChoice] = useState([]);
   let choicesArr = [];
   async function getApistuff() {
@@ -28,6 +29,7 @@ function Options() {
         console.log(response.data.hits[0]);
         return response.json();
       }
+
       console.log(response);
       console.log(response.status);
       throw response;
@@ -35,11 +37,13 @@ function Options() {
   }
   // .then(data => {
   // setData(data)
+
   // })
   // .catch(err => {
   // console.error(err)
   // setError(err)
   // })
+
   const click = () => {
     setChoice(choicesArr);
   };
