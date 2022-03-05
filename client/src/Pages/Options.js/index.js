@@ -10,6 +10,8 @@ import {
   FormGroup,
   Button,
 } from "react-bootstrap";
+
+
 function Options() {
   const rootURL = "https://api.edamam.com/search?";
   const apiKey = "&app_key=c0baa345e633fba28dd95821b2cec992";
@@ -25,7 +27,15 @@ function Options() {
       if (response.status === 200) {
         console.log(response);
         console.log(response.data);
-        console.log(response.data.hits[0]);
+        console.log(response.data.hits);
+        console.log(response.data.hits[1]);
+        const recipes = response.data.hits;
+        console.log(recipes)
+        console.log(`---------------------------------------`);
+        for( let i = 0; i < recipes.length; i++) {
+          console.log(response.data.hits[i]);
+        }
+
         return response.json();
       }
       console.log(response);
@@ -40,6 +50,7 @@ function Options() {
   // console.error(err)
   // setError(err)
   // })
+
   const click = () => {
     setChoice(choicesArr);
   };
