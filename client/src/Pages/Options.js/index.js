@@ -1,12 +1,4 @@
-const rootURL = "https://api.edamam.com/search?"
-const apiKey = "&app_key=c0baa345e633fba28dd95821b2cec992"
-const appId = "&app_id=9ace14ad"
-const param1 = "q=fish"
-const param2 = "&Health=peanut-free"
-const param3 = "&mealType=Lunch"
-
-
-
+import axios from "axios";
 import { render } from "@testing-library/react";
 import React, { useState } from "react";
 import {
@@ -19,18 +11,42 @@ import {
   Button,
 } from "react-bootstrap";
 function Options() {
+  const rootURL = "https://api.edamam.com/search?";
+  const apiKey = "&app_key=c0baa345e633fba28dd95821b2cec992";
+  const appId = "&app_id=9ace14ad";
+  const param1 = "q=fish";
+  const param2 = "&Health=peanut-free";
+  const param3 = "&mealType=Lunch";
+  const testAPI = rootURL + param1 + appId + apiKey + param2 + param3;
   const [choice, setChoice] = useState([]);
   let choicesArr = [];
-
+  async function getApistuff() {
+    await axios(testAPI).then((response) => {
+      if (response.status === 200) {
+        console.log(response);
+        console.log(response.data);
+        console.log(response.data.hits[0]);
+        return response.json();
+      }
+      console.log(response);
+      console.log(response.status);
+      throw response;
+    });
+  }
+  // .then(data => {
+  // setData(data)
+  // })
+  // .catch(err => {
+  // console.error(err)
+  // setError(err)
+  // })
   const click = () => {
     setChoice(choicesArr);
   };
   console.log(choicesArr);
-
   return (
     <Form>
       <h1>What do you want to eat today?</h1>
-
       <Form.Group className="mb-3">
         <h2>Protein Selection</h2>
         <InputGroup className="mb-3">
@@ -39,12 +55,21 @@ function Options() {
             title="Protein Selection"
             id="input-group-dropdown-1"
             onClick={(e) => {
-              choicesArr.push(e.currentTarget.value);}}
+              choicesArr.push(e.currentTarget.value);
+            }}
           >
-            <Dropdown.Item href="#" value="chicken">Chicken</Dropdown.Item>
-            <Dropdown.Item href="#" value="beef">Beef</Dropdown.Item>
-            <Dropdown.Item href="#" value="fish">Fish</Dropdown.Item>
-            <Dropdown.Item href="#" value="veggies">Veggies</Dropdown.Item>
+            <Dropdown.Item href="#" value="chicken">
+              Chicken
+            </Dropdown.Item>
+            <Dropdown.Item href="#" value="beef">
+              Beef
+            </Dropdown.Item>
+            <Dropdown.Item href="#" value="fish">
+              Fish
+            </Dropdown.Item>
+            <Dropdown.Item href="#" value="veggies">
+              Veggies
+            </Dropdown.Item>
           </DropdownButton>
         </InputGroup>
       </Form.Group>
@@ -63,7 +88,6 @@ function Options() {
           </DropdownButton>
         </InputGroup>
       </Form.Group>
-
       <Form.Group>
         <h2>Meal Course</h2>
         <InputGroup className="mb-3">
@@ -80,7 +104,6 @@ function Options() {
           </DropdownButton>
         </InputGroup>
       </Form.Group>
-
       <Form.Group>
         <h2>Allergies</h2>
         <InputGroup className="mb-3">
@@ -126,7 +149,7 @@ function Options() {
                   label={`Dairy-Free`}
                   id={`disabled-default-${type}`}
                 />
-                <Button variant="primary" onClick={() => click()}>
+                <Button variant="primary" onClick={() => getApistuff()}>
                   submit
                 </Button>
               </div>
@@ -137,5 +160,4 @@ function Options() {
     </Form>
   );
 }
-
 export default Options;
