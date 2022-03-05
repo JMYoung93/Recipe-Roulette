@@ -45,6 +45,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <CreateAccount/>
         <div className="App">
           <video autoPlay loop muted 
           style={{
