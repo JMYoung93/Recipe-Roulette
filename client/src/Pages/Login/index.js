@@ -19,6 +19,8 @@ function Login(props){
             const mutRes = await login({
                 variables: { email: formState.email, password: formState.password },
               });
+              const token = mutRes.data.login.token;
+              Auth.login(token);
         } catch(e){
             console.log(e)
         }
@@ -28,7 +30,7 @@ function Login(props){
         const { name, value } = e.target;
             setFormState({...formState, [name]: value });
     }
-
+    
     return (
         <div>
             <div>
@@ -36,7 +38,14 @@ function Login(props){
                 
             </div>
             <div>
-                <form onSubmit = {submit}>
+                
+                    {(formState.email != "") ? (
+                        <div> 
+                            <h2>Welcome <span> {formState.name} </span></h2>
+                            
+                        </div>
+                    ): (
+                    <form onSubmit = {submit}>
                     <input placeholder = "email@email.com" type = "email" id = "email" onChange = {change} required/>
                     <input placeholder = "password" type = "password" id = "password" onChange = {change} required />
                     {error ? (
@@ -46,7 +55,12 @@ function Login(props){
                     ) : null}
                     <button type = "submit" > Done </button>
                     <Link to = './createAccount'> To create an account </Link>
-                </form>
+                    </form>
+                    )}
+                    
+                    
+                    
+                
             </div>
         </div>
     )
