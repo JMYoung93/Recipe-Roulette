@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap');
-
 .mainForm {
     width: 50rem;
-    left: 500px;
     background: inherit;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     border-radius: 5px;
@@ -26,3 +24,5 @@
     filter: blur(10px);
     margin: -20px;
 }
+
+

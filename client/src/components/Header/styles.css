@@ -10,19 +10,18 @@ body {
     animation: rotation 50s infinite linear;
 }
 
-@keyframes rotation {
+/* @keyframes rotation {
     from {
       transform: rotate(0deg);
     }
     to {
       transform: rotate(359deg);
     }
-  }
+  } */
 
 .navbar {
     background: inherit;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-    border-radius: 5px;
     position: relative;
     z-index: 1;
     background: inherit;
