@@ -5,7 +5,7 @@ export default function Header(){
         <Container fluid className='justify-content-between'>
             <Row>
                 <Col >
-                <Image thumbnail={true} roundedCircle={true} src="https://images.unsplash.com/photo-1530908158103-e2d2bf40c235?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FydG9vbiUyMHJlZnJpZ2VyYXRvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" width={100} height={100}/>
+                <Image thumbnail={true} roundedCircle={true} src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_118556937_stock-vector-refrigerator-mascot--a-vector-cartoon-illustration-of-a-home-kitchen-refrigerator-mascot.html&psig=AOvVaw2XMpgVR4-hdtKP3kf8DgUF&ust=1646549417765000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiaztywrvYCFQAAAAAdAAAAABAD" width={100} height={100}/>
                 </Col>
                 <Col>
                 <Button variant="primary">LogIn</Button>
