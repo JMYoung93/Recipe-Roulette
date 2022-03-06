@@ -1,15 +1,23 @@
 import React from 'react'
 import {Card, Button, Carousel} from 'react-bootstrap'
-function Recipe(){
+
+
+function Recipe(props) {
     return(
     <Carousel>
       <Carousel.Item>
         <Card style={{ width: '30rem' }}>
-        <Card.Img variant="top" src="https://images.unsplash.com/photo-1583019107470-5bf8e4a96314?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDcyfHhqUFI0aGxrQkdBfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60" />
+        <Card.Img variant="top" src={props.data.recipe.image}/>
         <Card.Body>
-          <Card.Title>Recipe Title</Card.Title>
+          <Card.Title>{props.data.recipe.label}</Card.Title>
           <Card.Text>
-            Recipe
+           {props.data.recipe.ingredientLines.map(ingredient=>{
+             return(
+               <div>
+                 <p>{ingredient}</p>
+               </div>
+             )
+           })}
           </Card.Text>
           <Button variant="primary">Favorite</Button>
         </Card.Body>
