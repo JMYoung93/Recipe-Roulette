@@ -19,13 +19,9 @@ import Search from './Pages/Search.js'
 import Options from './Pages/Options';
 import { Button } from "./components/Button";
 import backgroundVideo from '../src/components/video/cookingbg.mp4'
-
-
-
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
-
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
@@ -35,13 +31,10 @@ const authLink = setContext((_, { headers }) => {
     },
   };
 });
-
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
-
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -63,9 +56,7 @@ function App() {
             <source src={backgroundVideo} type='video/mp4'/>
             </video>
           <Header />
-
-          {/* <Options /> */}
-          <Search/>
+          <Route exact path = 'search' component= {Search} />
           <Route exact path = '/' component = {Home}/>
           <Route exact path = '/login' component = {Login}/>
           <Route exact path = '/createAccount' component = {CreateAccount}/>
@@ -75,8 +66,6 @@ function App() {
         </Switch>
        </Router>
     </ApolloProvider>
-    
   );
 }
-
 export default App;

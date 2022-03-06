@@ -7,14 +7,11 @@ import {LOG} from '../../utils/mutations'
 import Auth from '../../utils/auth'
 
 function Login(props){
-
     const [formState, setFormState] = useState({
         email: '', 
         password: ''
     })
-
     const [login, {error}] = useMutation(LOG)
-
     const submit = async(e) => {
         e.preventDefault()
         try{
@@ -27,12 +24,10 @@ function Login(props){
             console.log(e)
         }
     }
-
     const change = (e) => {
         const { name, value } = e.target;
             setFormState({...formState, [name]: value });
     }
-    
     return (
         <div>
             <div>
@@ -40,7 +35,6 @@ function Login(props){
                 
             </div>
             <div>
-                
                     {(formState.email !== "") ? (
                         <div> 
                             <h2>Welcome <span> {formState.name} </span></h2>
@@ -59,13 +53,8 @@ function Login(props){
                     <Link to = './createAccount'> To create an account </Link>
                     </form>
                     )}
-                    
-                    
-                    
-                
             </div>
         </div>
     )
 }
-
 export default Login;
