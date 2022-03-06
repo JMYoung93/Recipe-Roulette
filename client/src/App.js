@@ -15,7 +15,8 @@ import Footer from './components/Footer'
 import Home from './Pages/Home';
 import CreateAccount from './Pages/CreateAccount'
 import Login from './Pages/Login'
-import Options from './Pages/Options.js';
+import Search from './Pages/Search.js'
+// import Options from './Pages/Options.js';
 import { Button } from "./components/Button";
 import backgroundVideo from '../src/components/video/cookingbg.mp4'
 
@@ -62,6 +63,9 @@ function App() {
             <source src={backgroundVideo} type='video/mp4'/>
             </video>
           <Header />
+
+          {/* <Options /> */}
+          <Search/>
           <Route exact path = '/' component = {Home}/>
           <Route exact path = '/login' component = {Login}/>
           <Route exact path = '/createAccount' component = {CreateAccount}/>
