@@ -113,20 +113,9 @@ function Options(props) {
                 <option id='protein' value='not picky'>NOT PICKY</option>
           </Form.Select>
         </Form.Group>
-        {
-        ["checkbox"].map((type) => (
-        <div key={`default-${type}`} className="mb-3">
-        <Form.Check
-                  type={type}
-                  id={`peanut-free`}
-                  label={`Peanut Free`}
-                  value="peanut-free"
-                  checked={props.formState.peanutFree}
-                  onChange={props.onChange}
-                /></div>))
-            }
-             <Button variant="primary">
-                  submit
+        
+             <Button variant="primary" type="button" onClick={handleFormSubmit}>
+                  Submit
                 </Button>
         </Form>
         </Container>
