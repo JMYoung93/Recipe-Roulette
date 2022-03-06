@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Timmana&display=swap');
+
+#recipe-title {
+    margin-top: 20px;
+    font-size: 58px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 8px 8px 5px rgb(0, 0, 0);
+}
+
 .mainForm {
-    width: 50rem;
+    width: 40rem;
     background: inherit;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     border-radius: 5px;
@@ -25,4 +35,31 @@
     margin: -20px;
 }
 
+.mx-auto {
+    position: relative;
+    background: none;
+    animation: rotation 50s infinite linear;
+}
 
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  .protein-label {
+    font-size: 35px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgb(0, 0, 0);
+  }
+
+  #protein {
+      width: 40%;
+      font-size: large;
+      font-weight: bold;
+      box-shadow: 4px 4px 8px rgb(0, 0, 0);
+  }

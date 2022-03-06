@@ -94,22 +94,23 @@ function Options(props) {
   return (
     <Container className="d-flex justify-content-center">
       <Form onSubmit={props.submitButton} className="mainForm">
+        <h1 className='text-center' id="recipe-title">Recipe Roulette</h1>
         <Image
           src={require("../../components/Header/roulettelogo.png")}
-          width={230}
-          height={230}
-          className="d-inline-block align top"
+          width={270}
+          height={270}
+          className="mx-auto d-block" alt="Responsive image"
         />
 
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor='protein'>Protein</Form.Label>
-          <Form.Select name='protein' id='protein'>
-                <option value='chicken'>CHICKEN</option>
-                <option value='fish'>FISH</option>
-                <option value='beef'>BEEF</option>
-                <option value='pork'>PORK</option>
-                <option value='veggies'>VEGGIES</option>
-                <option value='not picky'>NOT PICKY</option>
+        <Form.Group className="mb-3 text-center">
+          <Form.Label className="protein-label" htmlFor='protein'>Choose Your Protein</Form.Label>
+          <Form.Select className="text-center" name='protein' id='protein'>
+                <option id='protein' value='chicken'>CHICKEN</option>
+                <option id='protein' value='fish'>FISH</option>
+                <option id='protein' value='beef'>BEEF</option>
+                <option id='protein' value='pork'>PORK</option>
+                <option id='protein' value='veggies'>VEGGIES</option>
+                <option id='protein' value='not picky'>NOT PICKY</option>
           </Form.Select>
         </Form.Group>
         {
