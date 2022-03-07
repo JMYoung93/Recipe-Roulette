@@ -1,49 +1,60 @@
-import React, {useState} from 'react'
-import { useMutation } from '@apollo/client';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ADD_PROFILE} from '../../utils/mutations';
+import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
+import { ADD_PROFILE } from '../../utils/mutations';
 
 
-function CreateAccount(props){
-    const [formState, setFormState] = useState({ email: '', password: '' });
+function CreateAccount(){
+
+    const [formState, setFormState] = useState({ name: '',email: '', password: '' });
     const [addProfile] = useMutation(ADD_PROFILE);
 
+    const onSubmit = async (e) => {
     
-    const submit = async(e) => {
-        e.preventDefault()
-        const mutRes = await addProfile({
-            variables:{
-                name: formState.name,
-                email: formState.email,
-                password: formState.password
-            }
-        })
-        const token = mutRes.data.addUser.token;
-        Auth.login(token);
-    }
+    e.preventDefault();
+    
+    const mutationResponse = await addProfile({
+      variables: {
+        name: formState.name,
+        email: formState.email,
+        password: formState.password
+        
+      },
+    });
+    const token = mutationResponse.data.addProfile.token;
+    Auth.login(token);
+  };
 
-    const change = (e) => {
-        const { name, value } = e.target;
-        setFormState({...formState, [name]: value,});
-    }
+  const onChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
-
-    return(
-        <div>
-            <div>
-                <h1>Create an Account</h1>
-            </div>
-            <div>
-                <form>
-                    <input placeholder = "username" type = "username" id = "username" required/>
-                    <input placeholder = "email@email.com" type = "email" id = "email" required/>
-                    <input placeholder = "password" type = "password" id = "password" required />
-                    <button type = "submit" > Done </button>
-                    <Link to = '../login'> If account already exists</Link>
-                </form>
-            </div>
-        </div>
+   
+    return (
+        <form onSubmit={onSubmit} noValidate>
+            <h2>Create Account</h2>
+            <input
+                label = "Name"
+                placeholder = "Name"
+                name = "name"
+                onChange = {onChange}/>
+             <input
+                label = "Email"
+                placeholder = "Email"
+                name = "email"
+                onChange = {onChange}/>
+             <input
+                label = "Password"
+                placeholder = "Password"
+                name = "password"
+                onChange = {onChange}/>
+            <button type = "submit" primary>Submit</button>
+        </form>
     )
 }
 
