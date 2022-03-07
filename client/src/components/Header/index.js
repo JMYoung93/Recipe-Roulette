@@ -1,11 +1,11 @@
 import { Container , Row, Col,  Image, Button, Nav, Navbar} from "react-bootstrap"
-import "./styles.css"
+import "./styles.css";
 
 export default function Header(){
     return(
         <Navbar className='navbar'>
         <Container fluid className='justify-content-between'>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand>
                 <Image src={require('../Header/roulettelogo.png')} width={120} height={120}
                 className='d-inline-block align top'/>
             </Navbar.Brand>

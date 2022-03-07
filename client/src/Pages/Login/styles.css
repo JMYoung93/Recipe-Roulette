@@ -1,28 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Timmana&display=swap');
 
-.recipe-img {
-  height: auto;
-  max-height: 800px;
-  width: auto;
-  max-width: 800px;
-  object-fit: cover;
-}
-
-.recipe {
-    text-align: center;
+.d-flex {
+    font-family:'Noto Serif Display', serif;
     width: 40rem;
     background: inherit;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     border-radius: 5px;
     position: relative;
     z-index: 1;
+    background: inherit;
     overflow: hidden;
     font-family:'Noto Serif Display', serif;
 }
 
-.recipe:before {
+.d-flex:before {
     content: "";
+    justify-content: center;
     position: absolute;
     background: inherit;
     z-index: -1;
@@ -32,15 +26,30 @@
     bottom: 0;
     box-shadow: inset 0 0 500px rgb(255, 255, 255);
     filter: blur(10px);
-    margin: -20px;
-} 
-
-.rec-title {
-    font-size: 25px;
-    font-family:'Noto Serif Display', serif;
-    font-weight: bolder;
 }
 
-.recipe a {
-    color: black;
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 58px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 8px 8px 5px rgb(0, 0, 0);
+}
+
+.log-form {
+    justify-content: center;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+} 
+
+.log-btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.link {
+    padding-left: 60px;
+    text-shadow: 4px 4px 6px rgb(179, 179, 179);
 }

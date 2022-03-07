@@ -1,8 +1,15 @@
+import './styles.css'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
 import { ADD_PROFILE } from '../../utils/mutations';
+import {
+  Container, 
+  Form,
+  Col,
+  Button
+} from "react-bootstrap";
 
 
 function CreateAccount(){
@@ -36,25 +43,40 @@ function CreateAccount(){
 
    
     return (
-        <form onSubmit={onSubmit} noValidate>
-            <h2>Create Account</h2>
+    <Container className="d-flex justify-content-center">
+      <Col md='3'>
+        <Form className='act-form' onSubmit={onSubmit} noValidate>
+            <h2 className='text-center mb-4'>Create Account</h2>
+            <div className='grey-text'>
+          <Form.Group className = 'mb-3'>
             <input
                 label = "Name"
+                icon="user"
                 placeholder = "Name"
                 name = "name"
                 onChange = {onChange}/>
+          </Form.Group>
+          <Form.Group className = 'mb-3'>
              <input
                 label = "Email"
                 placeholder = "Email"
                 name = "email"
                 onChange = {onChange}/>
+          </Form.Group>
+          <Form.Group className = 'mb-3'>
              <input
                 label = "Password"
                 placeholder = "Password"
                 name = "password"
                 onChange = {onChange}/>
-            <button type = "submit" primary>Submit</button>
-        </form>
+           </Form.Group>
+            </div>
+            <Button className="create-btn">
+                  Submit
+            </Button>
+        </Form>
+      </Col>
+    </Container>
     )
 }
 
