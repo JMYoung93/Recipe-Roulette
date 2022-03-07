@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Timmana&display=swap');
 
 #recipe-title {
+    text-align: center;
     margin-top: 20px;
     font-size: 58px;
     font-family: 'Montserrat Subrayada', sans-serif;
@@ -50,16 +51,26 @@
     }
   }
 
-  .protein-label {
+  .label {
     font-size: 35px;
-    font-weight: 500;
+    font-weight: bolder;
     color: rgb(255, 255, 255);
     text-shadow: 5px 5px 4px rgb(0, 0, 0);
   }
 
-  #protein {
-      width: 40%;
+  #option {
+      display: flex;
+      justify-content: center;
+      color: black;
       font-size: large;
-      font-weight: bold;
+      font-weight:bolder;
       box-shadow: 4px 4px 8px rgb(0, 0, 0);
+  }
+
+  .sub-btn {
+    display: flex;
+    left: 270px;
+    margin-bottom: 10px;
+    position: relative;
+    justify-content: center;
   }

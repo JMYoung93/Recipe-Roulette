@@ -54,8 +54,6 @@ function Options(props) {
     console.log(e);
   };
 
-
-
   const click = () => {
     setChoice(choicesArr);
   };
@@ -71,40 +69,40 @@ function Options(props) {
         className="mx-auto d-block" alt="Responsive image"
       />
 
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor='protein'>Protein</Form.Label>
-          <Form.Select name='protein' id='protein'>
-                <option value='chicken'>CHICKEN</option>
-                <option value='fish'>FISH</option>
-                <option value='beef'>BEEF</option>
-                <option value='pork'>PORK</option>
-                <option value='veggies'>VEGGIES</option>
-                <option value='not picky'>NOT PICKY</option>
+        <Form.Group className="mb-3 text-center">
+          <Form.Label className="label" htmlFor='protein'>Choose Your Protein</Form.Label>
+          <Form.Select className="mb-3 text-center" name='protein' id='option'>
+                <option id='option' value='chicken'>Chicken</option>
+                <option id='option' value='fish'>Fish</option>
+                <option id='option' value='beef'>Beef</option>
+                <option id='option' value='pork'>Pork</option>
+                <option id='option' value='veggies'>Veggies</option>
+                <option id='option' value='not picky'>Not Picky</option>
           </Form.Select>
         </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor='course'>Meal Type</Form.Label>
-          <Form.Select name='course' id='course'>
-                <option value='breakfast'>Breakfast</option>
-                <option value='lunch'>Lunch</option>
-                <option value='dinner'>Dinner</option>
-                <option value='snack'>Snack</option>
-                <option value='lunch'>NOT PICKY</option>
+        <Form.Group className="mb-3 text-center">
+          <Form.Label className='label' htmlFor='course'>Meal Type</Form.Label>
+          <Form.Select className="mb-3 text-center" name='course' id='option'>
+                <option id='option' value='breakfast'>Breakfast</option>
+                <option id='option'value='lunch'>Lunch</option>
+                <option id='option' value='dinner'>Dinner</option>
+                <option id='option' value='snack'>Snack</option>
+                <option id='option' value='lunch'>Not Picky</option>
           </Form.Select>
         </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor='diet'>Dietary Preferences</Form.Label>
-          <Form.Select name='diet' id='diet'>
-                <option value='soy free'>Soy-Free</option>
-                <option value='dairy free'>Dairy-Free</option>
-                <option value='gluten free'>Gluten-Free</option>
-                <option value='egg free'>Egg-Free</option>
-                <option value='peanut free'>Peanut-Free</option>
+        <Form.Group className="mb-3 text-center">
+          <Form.Label className='label' htmlFor='diet'>Dietary Preferences</Form.Label>
+          <Form.Select className="mb-3 text-center" name='diet' id='option'>
+                <option id='option' value='soy free'>Soy-Free</option>
+                <option id='option' value='dairy free'>Dairy-Free</option>
+                <option id='option' value='gluten free'>Gluten-Free</option>
+                <option id='option' value='egg free'>Egg-Free</option>
+                <option id='option' value='peanut free'>Peanut-Free</option>
           </Form.Select>
         </Form.Group>
-             <Button variant="primary">
-                  submit
-                </Button>
+             <Button className="sub-btn">
+                  Submit
+            </Button>
         </Form>
         </Container>
   );
