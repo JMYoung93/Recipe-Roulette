@@ -2,7 +2,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Intro
-This site was built with the intention of giving users alternative recipe options than the ones that they go 
+This site was built with the intention of giving users alternative recipe options than the ones that they go to normally. 
+
 ## Installation
 ```
 npm i 
@@ -29,7 +30,7 @@ This product utilizes [MIT](https://opensource.org/licenses/MIT) as our license
 ## Contributions
 - [Leah Bolosan](https://github.com/Leah3232)
 - [Juwon Oh](https://github.com/Juwonoh41)
-- [Jeffery Young](https://github.com/JMYoung93)
+- [Jeffrey Young](https://github.com/JMYoung93)
 - [Daniel Beck](https://github.com/beckdan)
 - [Caroline Pastorelli](https://github.com/cpastorelli)
 
