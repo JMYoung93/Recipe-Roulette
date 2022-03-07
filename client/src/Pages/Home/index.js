@@ -4,7 +4,7 @@ import Recipe from "../../components/Recipe"
 export default function Home(){
     return(
         <Container className = 'd-flex justify-content-center'>
-            <Options />
+            
             <Recipe/>
         </Container>
     )

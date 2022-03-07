@@ -9,7 +9,6 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { Provider } from 'react-redux';
 import './App.css';
-import About from './Pages/About'
 import Header from './components/Header';
 import Footer from './components/Footer'
 import Home from './Pages/Home';
@@ -17,7 +16,6 @@ import CreateAccount from './Pages/CreateAccount'
 import Login from './Pages/Login'
 import Search from './Pages/Search.js'
 import Options from './Pages/Options';
-import { Button } from "./components/Button";
 import backgroundVideo from '../src/components/video/cookingbg.mp4'
 import Favorite from './Pages/favorites'
 const httpLink = createHttpLink({

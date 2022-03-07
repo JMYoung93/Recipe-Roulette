@@ -4,17 +4,18 @@ import React, {useState} from 'react'
 function Favorite(){
     return(
         <Container fluid justify-content-center>
+        <div className="Card">
             <div>
-                <h1>user info</h1>
+                <h1>User Info</h1>
             </div>
             <div>
                 <h1>Card Carosel of stored favorites</h1>
             </div>
             <div>
-                <h1>where the logout will be</h1>
+                <button primary> Logout</button>
             </div>
+        </div>
         </Container>
     )
 }
-
 export default Favorite;
