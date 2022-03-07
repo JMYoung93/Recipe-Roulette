@@ -21,6 +21,8 @@ function Search() {
     console.log(e)
   }
 
+
+  
   const onChange = (e) => {
       const checked = e.target.checked;
       const newFormInfo = {

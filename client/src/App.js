@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
@@ -35,6 +35,10 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+
+console.log(client)
+
+
 function App() {
   return (
     <ApolloProvider client={client}>

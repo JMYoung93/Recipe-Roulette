@@ -36,12 +36,7 @@ function Options(props) {
 
   // const handleProteinSelect = (e) => {
   //   setProteinSelection(e)
-  //   console.log(e)
-  // }
-
-  const handleDietSelect = (e) => {
-    setDietSelection(e);
-    console.log(e);
+ 
   };
 
   const handleMealSelect = (e) => {
@@ -110,9 +105,35 @@ function Options(props) {
                 <option value='beef'>BEEF</option>
                 <option value='pork'>PORK</option>
                 <option value='veggies'>VEGGIES</option>
-                <option value='not picky'>NOT PICKY</option>
+                <option value='chicken'>NOT PICKY</option>
           </Form.Select>
         </Form.Group>
+
+
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor='course'>Meal Type</Form.Label>
+          <Form.Select name='course' id='course'>
+                <option value='breakfast'>Breakfast</option>
+                <option value='lunch'>Lunch</option>
+                <option value='dinner'>Dinner</option>
+                <option value='snack'>Snack</option>
+                <option value='lunch'>NOT PICKY</option>
+          </Form.Select>
+        </Form.Group>
+        
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor='diet'>Dietary Preferences</Form.Label>
+          <Form.Select name='diet' id='diet'>
+                <option value='soy free'>Soy-Free</option>
+                <option value='dairy free'>Dairy-Free</option>
+                <option value='gluten free'>Gluten-Free</option>
+                <option value='egg free'>Egg-Free</option>
+                <option value='peanut free'>Peanut-Free</option>
+          </Form.Select>
+        </Form.Group>
+
+        https://stackoverflow.com/questions/49078351/checkbox-not-working-in-react
+
              <Button variant="primary">
                   submit
                 </Button>
@@ -120,111 +141,5 @@ function Options(props) {
         </Container>
   );
 };
-        /* <h1>What do you want to eat today?</h1>
-        <Form.Group>
-          <h2>Protein Choice</h2>
-          <InputGroup className="mb-3">
-            <DropdownButton
-              variant="outline-secondary"
-              title="Dietary Preferences"
-              id="input-group-dropdown-1"
-            >
-              <Dropdown.Item href="#">Beef</Dropdown.Item>
-              <Dropdown.Item href="#">Chicken</Dropdown.Item>
-              <Dropdown.Item href="#">Fish</Dropdown.Item>
-              <Dropdown.Item href="#">Pork</Dropdown.Item>
-              <Dropdown.Item href="#">Veggies</Dropdown.Item>
-            </DropdownButton>
-          </InputGroup>
-        </Form.Group>
-
-        <Form.Group>
-          <h2>Dietary Preferences</h2>
-          <InputGroup className="mb-3">
-            <DropdownButton
-              variant="outline-secondary"
-              title="Dietary Preferences"
-              id="input-group-dropdown-1"
-            >
-              <Dropdown.Item href="#">Vegetarian</Dropdown.Item>
-              <Dropdown.Item href="#">Vegan</Dropdown.Item>
-              <Dropdown.Item href="#">Pescatarian</Dropdown.Item>
-              <Dropdown.Item href="#">Not Picky</Dropdown.Item>
-            </DropdownButton>
-          </InputGroup>
-        </Form.Group>
-
-        <Form.Group>
-          <h2>Meal Course</h2>
-          <InputGroup className="mb-3">
-            <DropdownButton
-              variant="outline-secondary"
-              title="Meal Course"
-              id="input-group-dropdown-1"
-            >
-              <Dropdown.Item href="#">Breakfast</Dropdown.Item>
-              <Dropdown.Item href="#">Lunch</Dropdown.Item>
-              <Dropdown.Item href="#">Dinner</Dropdown.Item>
-              <Dropdown.Item href="#">Snack</Dropdown.Item>
-              <Dropdown.Item href="#">Not Picky</Dropdown.Item>
-            </DropdownButton>
-          </InputGroup>
-        </Form.Group>
-
-        <Form.Group>
-          <h2>Allergies</h2>
-          <InputGroup className="mb-3">
-            {["checkbox"].map((type) => (
-              <div key={`default-${type}`} className="mb-3">
-                <Form.Check
-                  type={type}
-                  id={`default-${type}`}
-                  label={`Gluten-Free`}
-                  value="gluten"
-                  onChange={(e) => choicesArr.push(e.currentTarget.value)}
-                />
-                <Form.Check
-                  type={type}
-                  id={`default-${type}`}
-                  label={`Soy-Free`}
-                  value="soy"
-                  onChange={(e) => {
-                    choicesArr.push(e.currentTarget.value);
-                  }}
-                />
-                <Form.Check
-                  type={type}
-                  id={`default-${type}`}
-                  label={`Peanut-Free`}
-                  value="nutfree"
-                  onChange={(e) => choicesArr.push(e.currentTarget.value)}
-                />
-                <Form.Check
-                  type={type}
-                  id={`default-${type}`}
-                  label={`Shellfish-Free`}
-                />
-                <Form.Check
-                  type={type}
-                  id={`default-${type}`}
-                  label={`Egg-Free`}
-                />
-
-                <Form.Check
-                  type={type}
-                  label={`Dairy-Free`}
-                  id={`disabled-default-${type}`}
-                />
-                <Button variant="primary" onClick={() => getApistuff()}>
-                  submit
-                </Button>
-              </div>
-            ))}
-          </InputGroup>
-        </Form.Group>
-      </Form> */
- 
-
-
-
+        
 export default Options;

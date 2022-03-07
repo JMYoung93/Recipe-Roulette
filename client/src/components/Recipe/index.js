@@ -9,16 +9,27 @@ function Recipe(props) {
         <Card style={{ width: '30rem' }}>
         {/* <Card.Img variant="top" src={props.data.recipe.image}/> */}
         <Card.Body>
+
+          {/* <Card.Title>{props.data.recipe.label}</Card.Title> */}
+          {/* <Card.Text> */}
+           {/* {props.data.recipe.ingredientLines.map(ingredient=>{
+
           {/* <Card.Title>{props.data.recipe.label}</Card.Title>
           <Card.Text>
            {props.data.recipe.ingredientLines.map(ingredient=>{
+
              return(
                <div>
                  <p>{ingredient}</p>
                </div>
              )
+
+           })} */}
+          {/* </Card.Text> */}
+
            })}
           </Card.Text> */}
+
           <Button variant="primary">Favorite</Button>
         </Card.Body>
       </Card>
