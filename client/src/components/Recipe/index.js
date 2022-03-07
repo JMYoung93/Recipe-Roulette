@@ -2,8 +2,6 @@ import "./styles.css";
 import React from 'react'
 import {Card, Button, Carousel} from 'react-bootstrap'
 
-
-
 function Recipe(props) {
     return(
     <Carousel>
