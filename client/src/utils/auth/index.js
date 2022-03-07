@@ -1,8 +1,8 @@
 import decode from 'jwt-decode';
 
 class Auth {
-    login(token) {
-        localStorage.setItem('token', token);
+    login(idToken) {
+        localStorage.setItem('idToken', idToken);
         window.location.assign('/');
       }
 }
