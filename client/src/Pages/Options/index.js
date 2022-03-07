@@ -114,7 +114,7 @@ function Options(props) {
           </Form.Select>
         </Form.Group>
         
-             <Button variant="primary" type="button" onClick={handleFormSubmit}>
+             <Button variant="primary" type="button" >
                   Submit
                 </Button>
         </Form>
