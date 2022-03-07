@@ -1,9 +1,10 @@
 import { Container } from "react-bootstrap"
 import React, {useState} from 'react'
+import "./styles.css";
 
 function Favorites(){
     return(
-        <Container fluid justify-content-center>
+        <Container className='fluid justify-content-center'>
             <div>
                 <h1>user info</h1>
             </div>

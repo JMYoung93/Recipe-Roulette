@@ -1,5 +1,5 @@
 import { Container , Row, Col,  Image, Button, Nav, Navbar} from "react-bootstrap"
-import "./styles.css"
+import "./styles.css";
 
 export default function Header(){
     return(

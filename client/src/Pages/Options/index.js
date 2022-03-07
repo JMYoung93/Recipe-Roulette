@@ -113,8 +113,8 @@ function Options(props) {
                 <option id='protein' value='not picky'>NOT PICKY</option>
           </Form.Select>
         </Form.Group>
-             <Button variant="primary">
-                  submit
+             <Button variant='secondary'>
+                  Submit
                 </Button>
         </Form>
         </Container>

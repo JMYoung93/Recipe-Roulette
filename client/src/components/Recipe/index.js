@@ -1,12 +1,14 @@
+import "./styles.css";
 import React from 'react'
 import {Card, Button, Carousel} from 'react-bootstrap'
+
 
 
 function Recipe(props) {
     return(
     <Carousel>
       <Carousel.Item>
-        <Card style={{ width: '30rem' }}>
+        <Card className='recipe'>
         {/* <Card.Img variant="top" src={props.data.recipe.image}/> */}
         <Card.Body>
           {/* <Card.Title>{props.data.recipe.label}</Card.Title>
@@ -19,7 +21,7 @@ function Recipe(props) {
              )
            })}
           </Card.Text> */}
-          <Button variant="primary">Favorite</Button>
+          {/* <Button variant='primary' className='fav-btn'>Favorite</Button> */}
         </Card.Body>
       </Card>
       </Carousel.Item>

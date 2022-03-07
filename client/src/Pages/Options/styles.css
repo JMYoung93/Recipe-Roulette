@@ -58,6 +58,7 @@
   }
 
   #protein {
+      color: black;
       width: 40%;
       font-size: large;
       font-weight: bold;

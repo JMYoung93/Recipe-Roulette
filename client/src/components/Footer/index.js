@@ -4,10 +4,11 @@ import './styles.css'
 
 export default function Footer(){
 return(
-    <Container className="container-fluid">
-        <h3>This App was Developed by Team Winners!</h3>
-     
-        <h4>Juwon, Caroline, Daniel, Jeffery and Leah</h4>
+    <Container className="text-center">
+        <div className = "">
+        <h4>This App was Developed by Team Winners:</h4>
+        <h5>Juwon, Caroline, Daniel, Jeffery and Leah</h5>
+        </div>
     </Container>
 )
 }
