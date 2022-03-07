@@ -1,11 +1,10 @@
 import { Container } from "react-bootstrap"
-import DropDown from "../../components/Dropdown/Dropdown"
+import Options from "../Options"
 import Recipe from "../../components/Recipe"
 export default function Home(){
     return(
-        <Container fluid justify-content-center>
-            <DropDown />
-            <h1>This is the Home page</h1>
+        <Container className = 'd-flex justify-content-center'>
+            <Options />
             <Recipe/>
         </Container>
     )
