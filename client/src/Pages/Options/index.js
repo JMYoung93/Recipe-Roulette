@@ -93,13 +93,14 @@ function Options(props) {
 
   return (
     <Container className="d-flex justify-content-center">
-      <Form onSubmit={props.submitButton} className="mainForm">
-        <Image
-          src={require("../../components/Header/roulettelogo.png")}
-          width={230}
-          height={230}
-          className="d-inline-block align top"
-        />
+    <Form onSubmit={props.submitButton} className="mainForm">
+      <h1 className='text-center' id="recipe-title">Recipe Roulette</h1>
+      <Image
+        src={require("../../components/Header/roulettelogo.png")}
+        width={270}
+        height={270}
+        className="mx-auto d-block" alt="Responsive image"
+      />
 
         <Form.Group className="mb-3">
           <Form.Label htmlFor='protein'>Protein</Form.Label>
