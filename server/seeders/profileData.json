@@ -3,5 +3,15 @@
         "name": "Caroline Pastorelli",
         "email": "NotRealEmail@email.com",
         "password": "example1234"
+    },
+    {
+        "name": "test1234",
+        "email": "test1234@email.com",
+        "password": "test1234"
+    },
+    {
+        "name": "tester123456",
+        "email": "tester12345@email.com",
+        "password": "tester12345"
     }
 ]

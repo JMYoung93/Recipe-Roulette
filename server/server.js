@@ -37,14 +37,14 @@ app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
 
 // can change name 'production' to something else if needed
-// if (process.env.NODE_ENV === 'production') {
-//     app.use(express.static(path.join(__dirname, '../client/build')));
-// }
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
-// // 
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/public/index.html'));
-// })
+// 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/public/index.html'));
+})
 
 // 
 db.once('open', () => {

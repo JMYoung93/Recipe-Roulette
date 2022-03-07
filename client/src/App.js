@@ -19,6 +19,7 @@ import Search from './Pages/Search.js'
 import Options from './Pages/Options/index.js';
 import { Button } from "./components/Button";
 import backgroundVideo from '../src/components/video/cookingbg.mp4'
+import Favorite from './Pages/favorites'
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -56,12 +57,13 @@ function App() {
             <source src={backgroundVideo} type='video/mp4'/>
             </video>
           <Header />
-          <Route exact path = 'search' component= {Search} />
+          <Route exact path = '/search' component= {Search} />
           <Route exact path = '/' component = {Home}/>
           <Route exact path = '/login' component = {Login}/>
           <Route exact path = '/createAccount' component = {CreateAccount}/>
           <Route exact path = '/Options' component = {Options}/>
-          <Footer />
+          <Route exact path = '/favorite' component={Favorite}/>
+          <Footer/>
         </div>
         </Switch>
        </Router>

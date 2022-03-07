@@ -54,38 +54,7 @@ function Options(props) {
     console.log(e);
   };
 
-  // async function getApistuff() {
-  //   await axios(testAPI)
-  //   .then((response) => {
-  //     if (response.status === 200) {
-  //       console.log(response);
-  //       console.log(response.data);
-  //       console.log(response.data.hits);
-  //       console.log(response.data.hits[1]);
-  //       const recipes = response.data.hits;
-  //       console.log(recipes)
-  //       console.log(`---------------------------------------`);
-  //       for( let i = 0; i < recipes.length; i++) {
-  //         console.log(response.data.hits[i]);
-  //       }
 
-  //       return response.json();
-  //     }
-
-  //     console.log(response);
-  //     console.log(response.status);
-  //     throw response;
-  //   } ,
-  //   //  .then(data => {
-  //   //   setData(data)
-
-  //   //   })
-  //   //   .catch(err => {
-  //   //   console.error(err)
-  //   //   setError(err)
-  //     // })
-  //   );
-  // }
 
   const click = () => {
     setChoice(choicesArr);
@@ -113,13 +82,35 @@ function Options(props) {
                 <option id='protein' value='not picky'>NOT PICKY</option>
           </Form.Select>
         </Form.Group>
-             <Button variant='secondary'>
-                  Submit
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor='course'>Meal Type</Form.Label>
+          <Form.Select name='course' id='course'>
+                <option value='breakfast'>Breakfast</option>
+                <option value='lunch'>Lunch</option>
+                <option value='dinner'>Dinner</option>
+                <option value='snack'>Snack</option>
+                <option value='lunch'>NOT PICKY</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor='diet'>Dietary Preferences</Form.Label>
+          <Form.Select name='diet' id='diet'>
+                <option value='soy free'>Soy-Free</option>
+                <option value='dairy free'>Dairy-Free</option>
+                <option value='gluten free'>Gluten-Free</option>
+                <option value='egg free'>Egg-Free</option>
+                <option value='peanut free'>Peanut-Free</option>
+          </Form.Select>
+        </Form.Group>
+             <Button variant="primary">
+                  submit
                 </Button>
         </Form>
         </Container>
   );
 };
-    
- 
+      
+
+
+
 export default Options;

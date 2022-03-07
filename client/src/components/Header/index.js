@@ -10,10 +10,11 @@ export default function Header(){
                 className='d-inline-block align top'/>
             </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link className="navlink" href="#home">Home</Nav.Link>
-                    <Nav.Link className="navlink" href="../">Favorites</Nav.Link>
-                    <Nav.Link className="navlink" href="#Logout">Login</Nav.Link>
-                    <Nav.Link className="navlink" href="#Favorites">Logout</Nav.Link>
+                    <Nav.Link className="navlink" href="/">Home</Nav.Link>
+                    <Nav.Link className="navlink" href="/favorite">Favorites</Nav.Link>
+                    <Nav.Link className="navlink" href="/login">Login</Nav.Link>
+                    <Nav.Link className="navlink" href="/createAccount">Create Account</Nav.Link>
+                    <Nav.Link className="navlink" href="/search">Options</Nav.Link>
                 </Nav>
         </Container>
         </Navbar>
