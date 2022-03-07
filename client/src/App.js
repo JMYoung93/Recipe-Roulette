@@ -11,7 +11,6 @@ import { Provider } from 'react-redux';
 import './App.css';
 import About from './Pages/About'
 import Header from './components/Header';
-import Footer from './components/Footer'
 import Home from './Pages/Home';
 import CreateAccount from './Pages/CreateAccount'
 import Login from './Pages/Login'
@@ -63,7 +62,6 @@ function App() {
           <Route exact path = '/createAccount' component = {CreateAccount}/>
           <Route exact path = '/Options' component = {Options}/>
           <Route exact path = '/favorite' component={Favorite}/>
-          <Footer/>
         </div>
         </Switch>
        </Router>
