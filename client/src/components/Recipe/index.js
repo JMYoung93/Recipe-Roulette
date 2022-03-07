@@ -7,9 +7,9 @@ function Recipe(props) {
     <Carousel>
       <Carousel.Item>
         <Card style={{ width: '30rem' }}>
-        <Card.Img variant="top" src={props.data.recipe.image}/>
+        {/* <Card.Img variant="top" src={props.data.recipe.image}/> */}
         <Card.Body>
-          <Card.Title>{props.data.recipe.label}</Card.Title>
+          {/* <Card.Title>{props.data.recipe.label}</Card.Title>
           <Card.Text>
            {props.data.recipe.ingredientLines.map(ingredient=>{
              return(
@@ -18,7 +18,7 @@ function Recipe(props) {
                </div>
              )
            })}
-          </Card.Text>
+          </Card.Text> */}
           <Button variant="primary">Favorite</Button>
         </Card.Body>
       </Card>

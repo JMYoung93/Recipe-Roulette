@@ -93,14 +93,14 @@ function Options(props) {
 
   return (
     <Container className="d-flex justify-content-center">
-      <Form onSubmit={props.submitButton} className="mainForm">
-        <h1 className='text-center' id="recipe-title">Recipe Roulette</h1>
-        <Image
-          src={require("../../components/Header/roulettelogo.png")}
-          width={270}
-          height={270}
-          className="mx-auto d-block" alt="Responsive image"
-        />
+    <Form onSubmit={props.submitButton} className="mainForm">
+      <h1 className='text-center' id="recipe-title">Recipe Roulette</h1>
+      <Image
+        src={require("../../components/Header/roulettelogo.png")}
+        width={270}
+        height={270}
+        className="mx-auto d-block" alt="Responsive image"
+      />
 
         <Form.Group className="mb-3 text-center">
           <Form.Label className="protein-label" htmlFor='protein'>Choose Your Protein</Form.Label>
@@ -113,9 +113,8 @@ function Options(props) {
                 <option id='protein' value='not picky'>NOT PICKY</option>
           </Form.Select>
         </Form.Group>
-        
-             <Button variant="primary" type="button" >
-                  Submit
+             <Button variant="primary">
+                  submit
                 </Button>
         </Form>
         </Container>
