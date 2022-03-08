@@ -3,9 +3,7 @@ mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/Recipe-Roulette',
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+    useUnifiedTopology: true
   }
 );
 module.exports = mongoose.connection;

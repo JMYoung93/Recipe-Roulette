@@ -55,7 +55,7 @@ function App() {
             <source src={backgroundVideo} type='video/mp4'/>
             </video>
           <Header />
-          <Route exact path = '/search' component= {Search} />
+          {/* <Route exact path = '/search' component= {Option} /> */}
           <Route exact path = '/' component = {Home}/>
           <Route exact path = '/login' component = {Login}/>
           <Route exact path = '/createAccount' component = {CreateAccount}/>

@@ -11,12 +11,13 @@ function Login(props) {
     email: "",
     password: "",
   });
+
   const [login, { error }] = useMutation(LOG);
   const submit = async (e) => {
     e.preventDefault();
     try {
       const mutRes = await login({
-        variables: { email: formState.email, password: formState.password },
+        variables: { ...formState },
       });
       const token = mutRes.data.login.token;
       Auth.login(token);
@@ -24,6 +25,7 @@ function Login(props) {
       console.log(e);
     }
   };
+
   const change = (e) => {
     const { name, value } = e.target;
     setFormState({ ...formState, [name]: value });
@@ -39,6 +41,8 @@ function Login(props) {
                   placeholder="email@email.com"
                   type="email"
                   id="email"
+                  name = "email"
+                  value = {formState.email}
                   onChange={change}
                   required
                 />
@@ -48,6 +52,8 @@ function Login(props) {
                   placeholder="password"
                   type="password"
                   id="password"
+                  name = "password"
+                  value = {formState.password}
                   onChange={change}
                   required
                 />
@@ -60,7 +66,7 @@ function Login(props) {
                 ) : null}
             </Form.Group>
                 </div>
-                <Button className="log-btn"> Done </Button><br>
+                <Button className="log-btn" type = "submit"> Done </Button><br>
                 </br>
                 <Link className='link' to="./createAccount"> Create an Account </Link>
             </Form>

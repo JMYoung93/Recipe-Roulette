@@ -4,21 +4,7 @@ import "./styles.css";
 
 function Favorite(){
     return(
-<<<<<<< HEAD
-        <Container fluid justify-content-center>
-        <div className="Card">
-            <div>
-                <h1>User Info</h1>
-            </div>
-            <div>
-                <h1>Card Carosel of stored favorites</h1>
-            </div>
-            <div>
-                <button primary> Logout</button>
-            </div>
-        </div>
-        </Container>
-=======
+
     <Container className="d-flex justify-content-center">
       <Carousel>
         <Carousel.Item>
@@ -114,7 +100,7 @@ function Favorite(){
         </Carousel.Item>
       </Carousel>
     </Container>
->>>>>>> dbc71b02e6104b3aa938f10cbc4f59ca916b9d16
+
     )
 }
 export default Favorite;
