@@ -4,6 +4,7 @@ import "./styles.css";
 
 function Favorite(){
     return(
+
     <Container className="d-flex justify-content-center">
       <Carousel>
         <Carousel.Item>
@@ -99,7 +100,7 @@ function Favorite(){
         </Carousel.Item>
       </Carousel>
     </Container>
+
     )
 }
-
 export default Favorite;

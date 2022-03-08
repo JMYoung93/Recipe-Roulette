@@ -9,7 +9,6 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { Provider } from 'react-redux';
 import './App.css';
-import About from './Pages/About'
 import Header from './components/Header';
 import Home from './Pages/Home';
 import CreateAccount from './Pages/CreateAccount'
@@ -56,7 +55,7 @@ function App() {
             <source src={backgroundVideo} type='video/mp4'/>
             </video>
           <Header />
-          <Route exact path = '/search' component= {Search} />
+          {/* <Route exact path = '/search' component= {Option} /> */}
           <Route exact path = '/' component = {Home}/>
           <Route exact path = '/login' component = {Login}/>
           <Route exact path = '/createAccount' component = {CreateAccount}/>
