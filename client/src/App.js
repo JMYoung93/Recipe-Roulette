@@ -56,8 +56,8 @@ function App() {
             </video>
           <Header />
           {/* <Route exact path = '/search' component= {Option} /> */}
-          <Route exact path = '/' component = {Home}/>
-          <Route exact path = '/login' component = {Login}/>
+          <Route exact path = '/' component = {Login}/>
+          {/* <Route exact path = '/login' component = {Login}/> */}
           <Route exact path = '/createAccount' component = {CreateAccount}/>
           <Route exact path = '/Options' component = {Options}/>
           <Route exact path = '/favorite' component={Favorite}/>
