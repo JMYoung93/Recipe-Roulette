@@ -58,7 +58,7 @@ function Options(props) {
   const rootURL = `https://api.edamam.com/search?q=${proteinSelection}&Health=${dietSelection}&mealType=${mealSelection}&app_key=c0baa345e633fba28dd95821b2cec992&app_id=9ace14ad`;
   const click = () => {
     axios.get(rootURL).then(res => {
-        let responseData = res.data 
+      
       console.log(res.data.hits)
       setResponseData(res.data.hits)
     })

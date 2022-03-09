@@ -20,7 +20,6 @@ function Recipe(props) {
                 <Card.Body>
                   <Card.Title class="rec-title">{meal.recipe.label}</Card.Title>
                   <Card.Text>
-                    <p>12 Ingredients | 50 Minutes | 425 Calories</p>
                     <a href={meal.recipe.url}>
                       Full Recipe
                     </a>
